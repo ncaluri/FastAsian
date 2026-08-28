@@ -1,0 +1,14 @@
+{
+  "name": "fastasian",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
