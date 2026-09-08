@@ -1,0 +1,17 @@
+/* FastAsian
+
+    localhosten --> Terminal/prompt = npm run dev
+    Local:   http://localhost:5173/
+
+
+
+
+
+
+
+
+
+
+
+
+*/
