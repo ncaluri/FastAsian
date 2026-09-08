@@ -1,0 +1,8 @@
+/* Utility to align material symbols properly */
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-size: 1.25rem; /* 20px */
+}
+.material-symbols-outlined.sm {
+  font-size: 1rem;
+}

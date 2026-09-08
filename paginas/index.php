@@ -1,11 +1,17 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Scalda - Vandaag Inchecken</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Material Symbols for Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<!-- Custom stylesheet -->
+<link rel="stylesheet" href="../stylesheet/stylesheet.css">
 <script>
+    // NOTE: this config must stay inline — it's JS config read by the
+    // Tailwind CDN script above, not CSS, so it can't live in stylesheet.css
     tailwind.config = {
       theme: {
         extend: {
@@ -27,16 +33,6 @@
       }
     }
   </script>
-<style data-purpose="custom-utilities">
-    /* Utility to align material symbols properly */
-    .material-symbols-outlined {
-      vertical-align: middle;
-      font-size: 1.25rem; /* 20px */
-    }
-    .material-symbols-outlined.sm {
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body class="bg-scalda-bg font-sans text-slate-800 antialiased h-screen flex overflow-hidden">
 <!-- BEGIN: Sidebar -->
@@ -299,4 +295,5 @@
 <!-- END: Scrollable Content -->
 </main>
 <!-- END: Main Content Area -->
-</body></html>
+</body>
+</html>
