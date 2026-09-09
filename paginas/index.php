@@ -48,18 +48,22 @@
 </div>
 <!-- Main Navigation -->
 <nav class="flex-1 px-3 py-2 space-y-1">
-<a aria-current="page" class="flex items-center gap-3 px-4 py-2.5 rounded bg-scalda-orange text-white font-medium shadow-sm transition-colors" href="#">
+<a aria-current="page" class="flex items-center gap-3 px-4 py-2.5 rounded bg-scalda-orange text-white font-medium shadow-sm transition-colors" href="index.php">
 <span class="material-symbols-outlined">calendar_today</span>
         Vandaag Inchecken
       </a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors font-medium" href="#">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors font-medium" href="studenten.php">
 <span class="material-symbols-outlined">badge</span>
         Studenten &amp; Pasjes
+      </a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors font-medium" href="kalender.php">
+<span class="material-symbols-outlined">calendar_month</span>
+        Kalender
       </a>
 </nav>
 <!-- Bottom Actions -->
 <div class="p-4 border-t border-white/10 space-y-2">
-<a class="flex items-center gap-3 px-3 py-2 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors text-sm font-medium" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors text-sm font-medium" href="instelling.php">
 <span class="material-symbols-outlined">settings</span>
         Instellingen
       </a>
@@ -290,10 +294,10 @@
 </div>
 </div>
 </div>
-<!-- END: Table Section -->
 </div>
-<!-- END: Scrollable Content -->
 </main>
-<!-- END: Main Content Area -->
 </body>
+
 </html> 
+
+</html>

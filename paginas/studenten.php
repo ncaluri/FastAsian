@@ -9,8 +9,10 @@
         extend: {
           colors: {
             scalda: {
-              green: '#0e7040',
-              orange: '#f08922',
+              green: '#1a7746',
+              green_light: '#288856',
+              orange: '#f28e2b',
+              bg: '#f8fafc',
               gray: '#f5f7f9',
               dark: '#333333'
             }
@@ -27,6 +29,8 @@
     }
   </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- Material Symbols for Icons (sidebar) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 <!-- Google Fonts: Inter -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -35,42 +39,50 @@
     }
   </style>
 </head>
-<body class="bg-[#f0f2f5] text-gray-800 antialiased overflow-x-hidden min-h-screen flex">
+<body class="bg-scalda-bg text-gray-800 antialiased h-screen flex overflow-hidden">
 <!-- BEGIN: Sidebar -->
-<aside class="w-64 bg-scalda-green min-h-screen flex flex-col shadow-xl z-10 flex-shrink-0 text-white font-medium sticky top-0 h-screen">
-<div class="p-4 bg-white flex items-center shadow-sm">
-<img alt="Scalda Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiAjjkqwVeJ7mfFLctWlRFR8lYztjxMdQGQRVt_xhUtrPmGivJukOq0azvrSXOAqTV8wV7ZMg6KAbLz_IzOx_hyuq_Pagrjhd1ipE0ml3o6i-KiOV7czPjdGReC-88Ew-seAj1Z_bsrjLbUTVlzFEFaIeCpNJ9uIu4zQ9UPK_0GCNnM-XFMDH2AOhma16CNgPymzJzIvE65eCiBdo1nNpnzXTAMrrHDaniAf8kpAoSmKjwpOfn3XystmUvcGlk3Qzj">
+<aside aria-label="Sidebar Navigation" class="w-64 bg-scalda-green flex flex-col h-full text-white shrink-0 shadow-lg z-10">
+<!-- Logo Area -->
+<div class="h-16 flex items-center px-6 bg-white w-full shadow-sm mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-green-600 relative overflow-hidden flex-shrink-0">
+<div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
 </div>
-<div class="px-4 py-6">
-<h2 class="text-white text-lg font-bold mb-1">Hoofdingang</h2>
-<p class="text-green-200 text-sm font-normal mb-8">Live Dashboard</p>
-<nav class="space-y-2">
-<a class="flex items-center px-4 py-2.5 text-green-100 hover:bg-green-700/50 rounded-lg transition-colors group" href="#">
-<i class="fa-regular fa-calendar-check w-5 h-5 mr-3 text-center text-lg"></i>
-<span class="">Vandaag Inchecken</span>
-</a>
-<a class="flex items-center px-4 py-2.5 bg-scalda-orange text-white rounded-lg shadow-md transition-colors" href="#">
-<i class="fa-solid fa-address-card w-5 h-5 mr-3 text-center text-lg"></i>
-<span class="">Studenten &amp; Pasjes</span>
-</a>
+<span class="text-xl font-semibold text-slate-800 tracking-tight">Scalda</span>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="flex-1 px-3 py-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors font-medium" href="index.php">
+<span class="material-symbols-outlined">calendar_today</span>
+        Vandaag Inchecken
+      </a>
+<a aria-current="page" class="flex items-center gap-3 px-4 py-2.5 rounded bg-scalda-orange text-white font-medium shadow-sm transition-colors" href="studenten.php">
+<span class="material-symbols-outlined">badge</span>
+        Studenten &amp; Pasjes
+      </a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors font-medium" href="kalender.php">
+<span class="material-symbols-outlined">calendar_month</span>
+        Kalender
+      </a>
 </nav>
-</div>
-<div class="mt-auto px-4 pb-6 space-y-2">
-<a class="flex items-center px-4 py-2 text-green-100 hover:bg-green-700/50 rounded-lg transition-colors text-sm" href="#">
-<i class="fa-solid fa-gear w-4 h-4 mr-3 text-center"></i>
-<span class="">Instellingen</span>
-</a>
-<a class="flex items-center px-4 py-2 text-green-100 hover:bg-green-700/50 rounded-lg transition-colors text-sm" href="#">
-<i class="fa-solid fa-arrow-right-from-bracket w-4 h-4 mr-3 text-center"></i>
-<span class="">Uitloggen</span>
-</a>
+<!-- Bottom Actions -->
+<div class="p-4 border-t border-white/10 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors text-sm font-medium" href="instelling.php">
+<span class="material-symbols-outlined">settings</span>
+        Instellingen
+      </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-white/80 hover:bg-scalda-green_light hover:text-white transition-colors text-sm font-medium" href="uitloggen.php">
+<span class="material-symbols-outlined">logout</span>
+        Uit Loggen
+      </a>
 </div>
 </aside>
 <!-- END: Sidebar -->
 <!-- BEGIN: Main Content -->
-<main class="flex-1 flex flex-col min-h-screen overflow-hidden bg-gray-50">
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-gray-50">
 <!-- Header -->
-<header class="bg-white h-16 flex items-center justify-end px-8 shadow-sm z-0 flex-shrink-0">
+<header class="bg-white h-16 flex items-center justify-end px-8 shadow-sm z-0 shrink-0">
 <div class="flex items-center space-x-4 text-gray-500">
 <button class="hover:text-gray-700 transition-colors">
 <i class="fa-regular fa-clock text-xl"></i>
@@ -89,22 +101,28 @@
 <!-- Add New Student Form -->
 <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
 <h2 class="text-lg font-semibold text-gray-900 mb-4 border-b border-gray-100 pb-3">Nieuwe Student Toevoegen</h2>
-<form class="flex flex-col md:flex-row items-end gap-4">
+<form id="student-form" class="flex flex-col gap-4">
+<div class="flex flex-col md:flex-row items-end gap-4">
 <div class="flex-1 w-full">
 <label class="block text-xs font-semibold text-gray-700 mb-1" for="naam">Naam Student</label>
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-scalda-green focus:ring-scalda-green sm:text-sm px-4 py-2.5 border" id="naam" placeholder="Volledige naam" type="text">
+<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-scalda-green focus:ring-scalda-green sm:text-sm px-4 py-2.5 border" id="naam" placeholder="Volledige naam" type="text" required>
 </div>
 <div class="w-full md:w-64">
 <label class="block text-xs font-semibold text-gray-700 mb-1" for="klas">Klas / Groep</label>
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-scalda-green focus:ring-scalda-green sm:text-sm px-4 py-2.5 border" id="klas" placeholder="Bijv: 3B" type="text">
+<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-scalda-green focus:ring-scalda-green sm:text-sm px-4 py-2.5 border" id="klas" placeholder="Bijv: SD1A" type="text" required>
 </div>
 <div class="flex gap-3 w-full md:w-auto">
-<button class="inline-flex items-center px-4 py-2.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-scalda-green transition-colors" type="button">
-<i class="fa-solid fa-expand mr-2 text-scalda-orange"></i> Scan NFC
+<button id="scan-btn" class="inline-flex items-center px-4 py-2.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-400 bg-gray-100 cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-scalda-green transition-colors" type="button" disabled>
+<i class="fa-solid fa-expand mr-2"></i> Scan NFC
             </button>
-<button class="inline-flex items-center px-6 py-2.5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-scalda-orange hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-scalda-orange transition-colors" type="submit">
+<button id="toevoegen-btn" class="inline-flex items-center px-6 py-2.5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-300 cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-scalda-orange transition-colors" type="submit" disabled>
 <i class="fa-solid fa-plus mr-2"></i> Toevoegen
             </button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<input id="student_nummer" class="hidden" type="text" readonly>
+<span id="scan-status" class="text-sm text-gray-500">Vul eerst naam en klas in om te kunnen scannen.</span>
 </div>
 </form>
 </section>
@@ -233,4 +251,93 @@
 
 
 
+<script>
+(function () {
+  const naamInput = document.getElementById('naam');
+  const klasInput = document.getElementById('klas');
+  const scanBtn = document.getElementById('scan-btn');
+  const toevoegenBtn = document.getElementById('toevoegen-btn');
+  const nummerInput = document.getElementById('student_nummer');
+  const statusEl = document.getElementById('scan-status');
+  const form = document.getElementById('student-form');
+
+  function setButtonEnabled(btn, enabled, activeClasses, inactiveClasses) {
+    btn.disabled = !enabled;
+    btn.className = btn.className
+      .replace(inactiveClasses, '')
+      .replace(activeClasses, '')
+      .trim() + ' ' + (enabled ? activeClasses : inactiveClasses);
+  }
+
+  const scanActive = 'text-gray-700 bg-white hover:bg-gray-50';
+  const scanInactive = 'text-gray-400 bg-gray-100 cursor-not-allowed';
+  const addActive = 'text-white bg-scalda-orange hover:bg-orange-500';
+  const addInactive = 'text-white bg-gray-300 cursor-not-allowed';
+
+  function checkNaamKlas() {
+    const ready = naamInput.value.trim() !== '' && klasInput.value.trim() !== '';
+    setButtonEnabled(scanBtn, ready, scanActive, scanInactive);
+    if (ready && !nummerInput.value) {
+      statusEl.textContent = 'Klik op "Scan NFC" en houd de studentenpas tegen de scanner.';
+    } else if (!ready) {
+      statusEl.textContent = 'Vul eerst naam en klas in om te kunnen scannen.';
+      nummerInput.value = '';
+      setButtonEnabled(toevoegenBtn, false, addActive, addInactive);
+    }
+  }
+
+  naamInput.addEventListener('input', checkNaamKlas);
+  klasInput.addEventListener('input', checkNaamKlas);
+
+  scanBtn.addEventListener('click', function () {
+    nummerInput.value = '';
+    setButtonEnabled(toevoegenBtn, false, addActive, addInactive);
+    statusEl.innerHTML = '<i class="fa-solid fa-satellite-dish mr-1.5 text-scalda-orange"></i> Wacht op scan\u2026 houd de pas tegen de scanner';
+    nummerInput.classList.remove('hidden');
+    nummerInput.readOnly = false;
+    nummerInput.value = '';
+    nummerInput.focus();
+  });
+
+  nummerInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const scanned = nummerInput.value.trim();
+      if (!scanned) {
+        statusEl.textContent = 'Geen geldige scan ontvangen, probeer opnieuw.';
+        return;
+      }
+      nummerInput.readOnly = true;
+      statusEl.innerHTML = '<i class="fa-solid fa-circle-check mr-1.5 text-scalda-green"></i> Pas gescand: <span class="font-semibold text-gray-800">' + scanned + '</span>';
+      setButtonEnabled(toevoegenBtn, true, addActive, addInactive);
+    }
+  });
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (!naamInput.value.trim() || !klasInput.value.trim() || !nummerInput.value.trim()) {
+      statusEl.textContent = 'Naam, klas en een gescand studentnummer zijn verplicht.';
+      return;
+    }
+    const payload = {
+      naam: naamInput.value.trim(),
+      klas: klasInput.value.trim(),
+      student_nummer: nummerInput.value.trim()
+    };
+    // TODO: koppel dit aan Supabase, bijvoorbeeld:
+    // const { error } = await supabase.from('studenten').insert({
+    //   naam: payload.naam,
+    //   student_nummer: payload.student_nummer,
+    //   klas_id: <opgezocht klas_id op basis van payload.klas>
+    // });
+    console.log('Nieuwe student klaar om op te slaan:', payload);
+    statusEl.innerHTML = '<i class="fa-solid fa-circle-check mr-1.5 text-scalda-green"></i> ' + payload.naam + ' toegevoegd.';
+    form.reset();
+    nummerInput.value = '';
+    nummerInput.classList.add('hidden');
+    setButtonEnabled(scanBtn, false, scanActive, scanInactive);
+    setButtonEnabled(toevoegenBtn, false, addActive, addInactive);
+  });
+})();
+</script>
 </body></html>
