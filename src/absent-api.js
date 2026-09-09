@@ -1,0 +1,1 @@
+const { data, error } = await supabase.rpc('absent_vandaag');
